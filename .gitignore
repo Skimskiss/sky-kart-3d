@@ -1,7 +1,5 @@
 node_modules/
-dist/
 scripts/out/
-docs/Sky-Kart-3D-Complete-Guide.pdf
 *.log
 .env
 .env.*

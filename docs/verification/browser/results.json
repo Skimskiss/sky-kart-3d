@@ -1,0 +1,382 @@
+[
+ {
+  "name": "main menu shows the title and all buttons",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Settings button opens settings",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Campaign tab opens the map with 12 track cards",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "only the first track is unlocked at the start",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Garage opens with a 3D preview canvas",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Missions screen lists missions",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "a locked track cannot be started (button disabled)",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "race screen starts (canvas + HUD)",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "countdown finishes and the race begins",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "ArrowUp accelerates the kart",
+  "ok": true,
+  "info": "speed 43.7"
+ },
+ {
+  "name": "ArrowLeft steers left",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Space = drift and Shift = boost are read together with the gas key",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "ArrowDown brakes",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Escape opens the pause menu",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "simulation time stands still while paused",
+  "ok": true,
+  "info": "2.983 -> 2.983"
+ },
+ {
+  "name": "held keys are cleared when paused/released",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Resume closes the pause menu",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "losing window focus pauses the race and clears held input",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Settings is reachable from the pause menu",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "results screen appears after the race",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "finishing gave coins and they were saved to localStorage",
+  "ok": true,
+  "info": "+519 coins, position 2"
+ },
+ {
+  "name": "the next track is unlocked and the star count is saved",
+  "ok": true,
+  "info": "stars 2"
+ },
+ {
+  "name": "best time is stored",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "progress survives a page reload",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Continue Adventure goes to the map with the next unfinished track selected",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "completed missions show an enabled CLAIM button",
+  "ok": true,
+  "info": "coins20,pads3,ramps5,races1,time150,time120"
+ },
+ {
+  "name": "claiming adds the reward once",
+  "ok": true,
+  "info": "519 -> 619"
+ },
+ {
+  "name": "the same reward cannot be claimed twice",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "claimed missions stay claimed after reload",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "results screen has NEXT TRACK, REPLAY and MAP buttons",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "NEXT TRACK starts the next track",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Restart race in the pause menu restarts the race",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "Quit to map leaves the race",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "REPLAY restarts the same track",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "MAP returns to the world map",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "the logo button returns to the main menu",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "buying a kart takes the coins and equips it",
+  "ok": true,
+  "info": "coins 5300"
+ },
+ {
+  "name": "an upgrade is bought and saved",
+  "ok": true,
+  "info": "{\"sprout\":{\"spd\":1,\"acc\":0,\"hnd\":0,\"bst\":0}}"
+ },
+ {
+  "name": "a paint is bought and equipped for that kart",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "equipment selection works (comet and back to sprout)",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "garage purchases survive a reload",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "the equipped kart and its upgrade are used in the race (stats affect gameplay)",
+  "ok": true,
+  "info": "maxSpeed 34.6"
+ },
+ {
+  "name": "a corrupt save falls back to a fresh game without crashing",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "a nonsense save is repaired",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "settings toggles are saved",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "graphics quality can be set",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "track 1 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 1, 103.2s"
+ },
+ {
+  "name": "track 2 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 3, 96.6s"
+ },
+ {
+  "name": "track 3 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 1, 91.1s"
+ },
+ {
+  "name": "track 4 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 3, 125.4s"
+ },
+ {
+  "name": "track 5 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 116.1s"
+ },
+ {
+  "name": "track 6 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 136.1s"
+ },
+ {
+  "name": "track 7 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 147.3s"
+ },
+ {
+  "name": "track 8 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 133.2s"
+ },
+ {
+  "name": "track 9 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 133.2s"
+ },
+ {
+  "name": "track 10 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 104.7s"
+ },
+ {
+  "name": "track 11 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 135.5s"
+ },
+ {
+  "name": "track 12 is playable and finishable (autopilot)",
+  "ok": true,
+  "info": "pos 4, 113.5s"
+ },
+ {
+  "name": "all 12 tracks unlocked / finished states saved",
+  "ok": true,
+  "info": "12 tracks recorded"
+ },
+ {
+  "name": "no console errors or warnings during the whole run",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "touch UI is shown (joystick + 3 big buttons)",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "auto-accelerate is on by default (no GAS button)",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "buttons are large enough for thumbs (>= 70 px)",
+  "ok": true,
+  "info": "drift 98px boost 86px brake 70px"
+ },
+ {
+  "name": "three simultaneous touches work (steer + drift + boost, gas is automatic)",
+  "ok": true,
+  "info": "{\"steer\":1,\"drift\":true,\"boost\":true,\"thr\":1}"
+ },
+ {
+  "name": "joystick is analog and steers the other way",
+  "ok": true,
+  "info": "steer -1.00"
+ },
+ {
+  "name": "brake overrides auto-gas",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "releasing all touches clears every input",
+  "ok": true,
+  "info": "{\"steer\":0,\"drift\":false,\"boost\":false,\"brake\":0}"
+ },
+ {
+  "name": "focus loss while a button is held clears it and pauses",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "landscape: canvas fills the screen, buttons on screen, no sideways scroll",
+  "ok": true,
+  "info": "{\"cw\":844,\"ch\":390,\"iw\":844,\"ih\":390,\"sw\":844,\"hud\":true,\"joy\":true,\"btn\":true}"
+ },
+ {
+  "name": "rotated to portrait: canvas resized, controls still on screen, no sideways scroll",
+  "ok": true,
+  "info": "{\"cw\":390,\"ch\":844,\"iw\":390,\"ih\":844,\"sw\":390,\"hud\":true,\"joy\":true,\"btn\":true}"
+ },
+ {
+  "name": "map screen fits a portrait phone (nothing sticks out sideways)",
+  "ok": true,
+  "info": "[]"
+ },
+ {
+  "name": "garage screen fits a portrait phone (nothing sticks out sideways)",
+  "ok": true,
+  "info": "[]"
+ },
+ {
+  "name": "missions screen fits a portrait phone (nothing sticks out sideways)",
+  "ok": true,
+  "info": "[]"
+ },
+ {
+  "name": "settings screen fits a portrait phone (nothing sticks out sideways)",
+  "ok": true,
+  "info": "[]"
+ },
+ {
+  "name": "menu screen fits a portrait phone (nothing sticks out sideways)",
+  "ok": true,
+  "info": "[]"
+ },
+ {
+  "name": "no console errors on the phone run",
+  "ok": true,
+  "info": ""
+ }
+]

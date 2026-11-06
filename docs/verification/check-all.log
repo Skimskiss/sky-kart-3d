@@ -1,0 +1,125 @@
+
+> sky-kart-3d@1.0.0 check
+> node scripts/check-tracks.mjs && node scripts/check-save.mjs && node scripts/check-sim.mjs && node scripts/check-gameplay.mjs
+
+┌─────────┬────────────┬──────┬──────┬───────┬─────────┬─────┬──────┬───────┬────────┬───────────────────────────────────────────────┐
+│ (index) │ id         │ lap  │ minR │ clear │ coins   │ cps │ pads │ ramps │ movers │ shortcut                                      │
+├─────────┼────────────┼──────┼──────┼───────┼─────────┼─────┼──────┼───────┼────────┼───────────────────────────────────────────────┤
+│ 0       │ 'tropical' │ 1327 │ 29   │ 80    │ '54+16' │ 6   │ 4    │ 2     │ 0      │ 'Sand Spit saves 43% (139 vs 244 m), dirt'    │
+│ 1       │ 'snow'     │ 1248 │ 24   │ 41    │ '72+7'  │ 6   │ 3    │ 2     │ 2      │ 'Ice Slide saves 49% (75 vs 148 m), ice'      │
+│ 2       │ 'desert'   │ 1169 │ 29   │ 80    │ '51+8'  │ 6   │ 4    │ 1     │ 4      │ 'Temple Cut saves 31% (94 vs 136 m), dirt'    │
+│ 3       │ 'jungle'   │ 1560 │ 21   │ 79    │ '51+20' │ 6   │ 3    │ 2     │ 3      │ 'Vine Bridge saves 45% (179 vs 328 m), dirt'  │
+│ 4       │ 'coral'    │ 1222 │ 16   │ 80    │ '42+20' │ 5   │ 2    │ 2     │ 3      │ 'Reef Tunnel saves 37% (238 vs 376 m), water' │
+│ 5       │ 'autumn'   │ 1662 │ 33   │ 83    │ '69+16' │ 6   │ 3    │ 2     │ 3      │ 'Deer Trail saves 44% (143 vs 256 m), dirt'   │
+│ 6       │ 'lunar'    │ 1651 │ 67   │ 86    │ '82+33' │ 6   │ 2    │ 3     │ 3      │ 'Crater Cut saves 19% (305 vs 376 m), road'   │
+│ 7       │ 'mushroom' │ 1636 │ 36   │ 76    │ '58+16' │ 6   │ 3    │ 2     │ 2      │ 'Spore Path saves 50% (139 vs 280 m), dirt'   │
+│ 8       │ 'thunder'  │ 1577 │ 33   │ 85    │ '63+15' │ 6   │ 4    │ 2     │ 4      │ 'Bolt Bridge saves 31% (135 vs 196 m), road'  │
+│ 9       │ 'volcano'  │ 1258 │ 21   │ 85    │ '23+34' │ 6   │ 4    │ 2     │ 5      │ 'Ash Bridge saves 17% (310 vs 376 m), dirt'   │
+│ 10      │ 'aurora'   │ 1666 │ 55   │ 83    │ '68+20' │ 6   │ 4    │ 2     │ 3      │ 'Glacier Run saves 46% (178 vs 328 m), ice'   │
+│ 11      │ 'castle'   │ 1390 │ 27   │ 75    │ '54+9'  │ 6   │ 4    │ 3     │ 4      │ 'Royal Bridge saves 44% (103 vs 184 m), road' │
+└─────────┴────────────┴──────┴──────┴───────┴─────────┴─────┴──────┴───────┴────────┴───────────────────────────────────────────────┘
+
+All track geometry checks passed.
+Save data
+  ok  default save is valid and sanitize() keeps it unchanged
+  ok  garbage values give a valid default save
+  ok  specific repairs
+  ok  finished track keeps the next one unlocked
+  ok  corrupt JSON in storage: defaults are used and the bad text is kept aside
+  ok  blocked storage never throws
+  ok  save -> load round trip
+Stars, unlocking, rewards
+  ok  stars: finish = 1, top three = 2, win = 3
+  ok  finishing unlocks the next track (even last place)
+  ok  not finishing gives nothing and unlocks nothing
+  ok  stars only go up and star coins are paid once per star
+  ok  reward breakdown adds up
+  ok  best time and best lap only improve
+  ok  the last track unlocks nothing further
+  ok  next-track pointer (Continue Adventure)
+Missions
+  ok  mission cannot be claimed early or twice
+  ok  race stats feed the missions (coins, drift, pads, wins, time)
+  ok  unknown mission id is refused
+Garage
+  ok  buying a kart costs coins once, equips it, and cannot be repeated
+  ok  not enough coins is refused and nothing changes
+  ok  four or more karts exist and each can be bought
+  ok  equip only works for owned karts
+  ok  paints are per kart; free paints work; paid paints cost coins
+  ok  upgrades: cost, level cap, and stats really change
+  ok  cosmetics (driver, wings) can be bought and equipped
+Store (real zustand store, fake storage)
+  ok  a locked track cannot be started; an unlocked one can
+  ok  claim and purchase through the store are saved immediately
+
+All 27 save / rules checks passed.
+┌─────────┬────────────┬──────────┬──────────┬───────────┬──────────┬──────┬───────────┬───────┐
+│ (index) │ id         │ finished │ winner   │ par       │ respawns │ hits │ shortcuts │ coins │
+├─────────┼────────────┼──────────┼──────────┼───────────┼──────────┼──────┼───────────┼───────┤
+│ 0       │ 'tropical' │ '4/4'    │ '103.9s' │ undefined │ 0        │ 0    │ 5         │ 83    │
+│ 1       │ 'snow'     │ '4/4'    │ '96.2s'  │ undefined │ 0        │ 9    │ 4         │ 125   │
+│ 2       │ 'desert'   │ '4/4'    │ '90.3s'  │ undefined │ 0        │ 8    │ 4         │ 54    │
+│ 3       │ 'jungle'   │ '4/4'    │ '114.4s' │ undefined │ 0        │ 6    │ 5         │ 96    │
+│ 4       │ 'coral'    │ '4/4'    │ '92.5s'  │ undefined │ 0        │ 17   │ 9         │ 35    │
+│ 5       │ 'autumn'   │ '4/4'    │ '125.1s' │ undefined │ 0        │ 14   │ 3         │ 87    │
+│ 6       │ 'lunar'    │ '4/4'    │ '137.6s' │ undefined │ 0        │ 8    │ 4         │ 94    │
+│ 7       │ 'mushroom' │ '4/4'    │ '110.5s' │ undefined │ 0        │ 10   │ 4         │ 124   │
+│ 8       │ 'thunder'  │ '4/4'    │ '113.6s' │ undefined │ 0        │ 12   │ 4         │ 84    │
+│ 9       │ 'volcano'  │ '4/4'    │ '89.9s'  │ undefined │ 0        │ 18   │ 6         │ 51    │
+│ 10      │ 'aurora'   │ '4/4'    │ '106.2s' │ undefined │ 0        │ 11   │ 5         │ 135   │
+│ 11      │ 'castle'   │ '4/4'    │ '101.8s' │ undefined │ 0        │ 13   │ 5         │ 86    │
+└─────────┴────────────┴──────────┴──────────┴───────────┴──────────┴──────┴───────────┴───────┘
+All AI races finished.
+Laps and checkpoints
+  ok  a lap only counts after every checkpoint, in order
+  ok  a normal lap passes all checkpoints and is credited
+  ok  3-lap race: 3 lap times, finish after the third
+  ok  checkpoint events are ordered 1..K each lap
+  ok  positions: unique 1..4, finishers ordered by finish time
+  ok  live ranking agrees with progress at every moment of a race
+Driving
+  ok  ramps launch the kart into the air and it lands again
+  ok  low gravity (Lunar Circuit) makes jumps longer than on Tropical Coast
+  ok  boost button: needs boost in the bar, drains it, makes the kart faster
+  ok  drifting fills the boost bar and gives a mini-boost on release
+  ok  boost pad speeds the kart up and counts for the missions
+  ok  off-road slows the kart; walls stop it leaving the track
+  ok  braking stops the kart and reverse works
+  ok  a stuck kart is put back on the road (safe recovery), and R resets on demand
+  ok  karts bump each other apart
+Vehicle stats change the race
+  ok  better stats give faster laps (speed, acceleration, handling each help)
+  ok  boost stat fills the bar faster and boosts harder
+  ok  heavier karts win bumps
+Shortcuts
+       saves 5.7 s over 3 laps (main 102.5 s, shortcut 96.7 s)
+  ok  Tropical Coast: the shortcut is used, finishable, and faster than the main road
+       saves 7.2 s over 3 laps (main 97.8 s, shortcut 90.6 s)
+  ok  Snow Peaks: the shortcut is used, finishable, and faster than the main road
+       saves 7.8 s over 3 laps (main 100.5 s, shortcut 92.7 s)
+  ok  Desert Ruins: the shortcut is used, finishable, and faster than the main road
+       saves 13.7 s over 3 laps (main 126.6 s, shortcut 112.9 s)
+  ok  Emerald Jungle: the shortcut is used, finishable, and faster than the main road
+       saves 5.3 s over 3 laps (main 103.4 s, shortcut 98.2 s)
+  ok  Coral Ocean: the shortcut is used, finishable, and faster than the main road
+       saves 9.2 s over 3 laps (main 137.2 s, shortcut 128.1 s)
+  ok  Autumn Forest: the shortcut is used, finishable, and faster than the main road
+       saves 10.8 s over 3 laps (main 144.3 s, shortcut 133.5 s)
+  ok  Lunar Circuit: the shortcut is used, finishable, and faster than the main road
+       saves 13.3 s over 3 laps (main 132.8 s, shortcut 119.5 s)
+  ok  Mushroom Grove: the shortcut is used, finishable, and faster than the main road
+       saves 10.7 s over 3 laps (main 135.4 s, shortcut 124.8 s)
+  ok  Thunder Island: the shortcut is used, finishable, and faster than the main road
+       saves 2.9 s over 3 laps (main 104.7 s, shortcut 101.8 s)
+  ok  Volcanic Core: the shortcut is used, finishable, and faster than the main road
+       saves 17.7 s over 3 laps (main 135.3 s, shortcut 117.5 s)
+  ok  Aurora Pass: the shortcut is used, finishable, and faster than the main road
+       saves 9.1 s over 3 laps (main 118.2 s, shortcut 109.1 s)
+  ok  Sky Castle: the shortcut is used, finishable, and faster than the main road
+Speed of the simulation
+       0.004 ms per step (0.2 ms of CPU per second of game time)
+  ok  one 60 Hz step with 4 karts costs well under 1 ms (JS only)
+
+All 31 gameplay checks passed.
+check exit 0

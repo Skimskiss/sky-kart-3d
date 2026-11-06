@@ -4,6 +4,10 @@ An arcade kart racing game for the browser. Race 3 AI rivals on **12 floating-is
 
 Made with **Vite, React, JavaScript, React Three Fiber and Three.js**. All art and sound are generated in code (no downloaded assets).
 
+## Download and play
+
+The repository download includes the source, the ready-to-host production build in [dist/](dist/), the [complete PDF guide](docs/Sky-Kart-3D-Complete-Guide.pdf), and [recorded test output](docs/verification/). Upload the contents of dist to a static web host, or use the local launcher below.
+
 ## Play it
 
 * **Windows, easiest:** double-click `play now.cmd` (needs Node.js 18+). It installs, builds, starts the game and prints a phone address + QR code.

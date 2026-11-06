@@ -1,0 +1,106 @@
+Menus and navigation
+  ok   main menu shows the title and all buttons
+  ok   Settings button opens settings
+  ok   Campaign tab opens the map with 12 track cards
+  ok   only the first track is unlocked at the start
+  ok   Garage opens with a 3D preview canvas
+  ok   Missions screen lists missions
+Locked track / start race with the keyboard
+  ok   a locked track cannot be started (button disabled)
+  ok   race screen starts (canvas + HUD)
+  ok   countdown finishes and the race begins
+  ok   ArrowUp accelerates the kart  (speed 43.7)
+  ok   ArrowLeft steers left
+  ok   Space = drift and Shift = boost are read together with the gas key
+  ok   ArrowDown brakes
+Pause and focus loss
+  ok   Escape opens the pause menu
+  ok   simulation time stands still while paused  (2.983 -> 2.983)
+  ok   held keys are cleared when paused/released
+  ok   Resume closes the pause menu
+  ok   losing window focus pauses the race and clears held input
+  ok   Settings is reachable from the pause menu
+Finish a race, rewards, saving
+  ok   results screen appears after the race
+  ok   finishing gave coins and they were saved to localStorage  (+519 coins, position 2)
+  ok   the next track is unlocked and the star count is saved  (stars 2)
+  ok   best time is stored
+  ok   progress survives a page reload
+  ok   Continue Adventure goes to the map with the next unfinished track selected
+Missions
+  ok   completed missions show an enabled CLAIM button  (coins20,pads3,ramps5,races1,time150,time120)
+  ok   claiming adds the reward once  (519 -> 619)
+  ok   the same reward cannot be claimed twice
+  ok   claimed missions stay claimed after reload
+Results and pause buttons
+  ok   results screen has NEXT TRACK, REPLAY and MAP buttons
+  ok   NEXT TRACK starts the next track
+  ok   Restart race in the pause menu restarts the race
+  ok   Quit to map leaves the race
+  ok   REPLAY restarts the same track
+  ok   MAP returns to the world map
+  ok   the logo button returns to the main menu
+Garage: purchase, equip, upgrade, reload
+  ok   buying a kart takes the coins and equips it  (coins 5300)
+  ok   an upgrade is bought and saved  ({"sprout":{"spd":1,"acc":0,"hnd":0,"bst":0}})
+  ok   a paint is bought and equipped for that kart
+  ok   equipment selection works (comet and back to sprout)
+  ok   garage purchases survive a reload
+  ok   the equipped kart and its upgrade are used in the race (stats affect gameplay)  (maxSpeed 34.6)
+Invalid save data
+  ok   a corrupt save falls back to a fresh game without crashing
+  ok   a nonsense save is repaired
+Settings
+  ok   settings toggles are saved
+  ok   graphics quality can be set
+All 12 tracks: start, race with autopilot, finish, results
+  ok   track 1 is playable and finishable (autopilot)  (pos 1, 103.2s)
+  ok   track 2 is playable and finishable (autopilot)  (pos 3, 96.6s)
+  ok   track 3 is playable and finishable (autopilot)  (pos 1, 91.1s)
+  ok   track 4 is playable and finishable (autopilot)  (pos 3, 125.4s)
+  ok   track 5 is playable and finishable (autopilot)  (pos 4, 116.1s)
+  ok   track 6 is playable and finishable (autopilot)  (pos 4, 136.1s)
+  ok   track 7 is playable and finishable (autopilot)  (pos 4, 147.3s)
+  ok   track 8 is playable and finishable (autopilot)  (pos 4, 133.2s)
+  ok   track 9 is playable and finishable (autopilot)  (pos 4, 133.2s)
+  ok   track 10 is playable and finishable (autopilot)  (pos 4, 104.7s)
+  ok   track 11 is playable and finishable (autopilot)  (pos 4, 135.5s)
+  ok   track 12 is playable and finishable (autopilot)  (pos 4, 113.5s)
+┌─────────┬───────┬──────┬─────┬───────┬──────┐
+│ (index) │ track │ done │ pos │ time  │ laps │
+├─────────┼───────┼──────┼─────┼───────┼──────┤
+│ 0       │ 1     │ true │ 1   │ 103.2 │ null │
+│ 1       │ 2     │ true │ 3   │ 96.6  │ null │
+│ 2       │ 3     │ true │ 1   │ 91.1  │ null │
+│ 3       │ 4     │ true │ 3   │ 125.4 │ null │
+│ 4       │ 5     │ true │ 4   │ 116.1 │ null │
+│ 5       │ 6     │ true │ 4   │ 136.1 │ null │
+│ 6       │ 7     │ true │ 4   │ 147.3 │ null │
+│ 7       │ 8     │ true │ 4   │ 133.2 │ null │
+│ 8       │ 9     │ true │ 4   │ 133.2 │ null │
+│ 9       │ 10    │ true │ 4   │ 104.7 │ null │
+│ 10      │ 11    │ true │ 4   │ 135.5 │ null │
+│ 11      │ 12    │ true │ 4   │ 113.5 │ null │
+└─────────┴───────┴──────┴─────┴───────┴──────┘
+  ok   all 12 tracks unlocked / finished states saved  (12 tracks recorded)
+  ok   no console errors or warnings during the whole run
+Phone: touch controls, simultaneous touches, orientation
+  ok   touch UI is shown (joystick + 3 big buttons)
+  ok   auto-accelerate is on by default (no GAS button)
+  ok   buttons are large enough for thumbs (>= 70 px)  (drift 98px boost 86px brake 70px)
+  ok   three simultaneous touches work (steer + drift + boost, gas is automatic)  ({"steer":1,"drift":true,"boost":true,"thr":1})
+  ok   joystick is analog and steers the other way  (steer -1.00)
+  ok   brake overrides auto-gas
+  ok   releasing all touches clears every input  ({"steer":0,"drift":false,"boost":false,"brake":0})
+  ok   focus loss while a button is held clears it and pauses
+  ok   landscape: canvas fills the screen, buttons on screen, no sideways scroll  ({"cw":844,"ch":390,"iw":844,"ih":390,"sw":844,"hud":true,"joy":true,"btn":true})
+  ok   rotated to portrait: canvas resized, controls still on screen, no sideways scroll  ({"cw":390,"ch":844,"iw":390,"ih":844,"sw":390,"hud":true,"joy":true,"btn":true})
+  ok   map screen fits a portrait phone (nothing sticks out sideways)  ([])
+  ok   garage screen fits a portrait phone (nothing sticks out sideways)  ([])
+  ok   missions screen fits a portrait phone (nothing sticks out sideways)  ([])
+  ok   settings screen fits a portrait phone (nothing sticks out sideways)  ([])
+  ok   menu screen fits a portrait phone (nothing sticks out sideways)  ([])
+  ok   no console errors on the phone run
+
+All 76 browser checks passed.
+browser exit 0
