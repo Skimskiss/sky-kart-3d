@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#475569"/></marker>
+  </defs>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <g font-size="13" font-weight="700" fill="#14193d" text-anchor="middle">
+    <rect x="10" y="40" width="130" height="70" rx="10" fill="#fff3cf" stroke="#d99a00" stroke-width="2"/>
+    <text x="75" y="66">Keys, pad,</text><text x="75" y="83">touch</text><text x="75" y="100" font-size="10" font-weight="400">browser events</text>
+
+    <rect x="160" y="40" width="130" height="70" rx="10" fill="#fff3cf" stroke="#d99a00" stroke-width="2"/>
+    <text x="225" y="66">pollInput()</text><text x="225" y="84" font-size="10" font-weight="400">game/input.js</text><text x="225" y="98" font-size="10" font-weight="400">one input object</text>
+
+    <rect x="310" y="40" width="140" height="70" rx="10" fill="#f1e8fd" stroke="#7c3aed" stroke-width="2"/>
+    <text x="380" y="66">step() × n</text><text x="380" y="84" font-size="10" font-weight="400">game/sim.js, 1/60 s each</text><text x="380" y="98" font-size="10" font-weight="400">AI, physics, laps</text>
+
+    <rect x="470" y="40" width="130" height="70" rx="10" fill="#e3f6ea" stroke="#22a35a" stroke-width="2"/>
+    <text x="535" y="66">visuals.update()</text><text x="535" y="84" font-size="10" font-weight="400">game/visuals.js</text><text x="535" y="98" font-size="10" font-weight="400">smooth in-between</text>
+
+    <rect x="620" y="40" width="130" height="70" rx="10" fill="#e3f6ea" stroke="#22a35a" stroke-width="2"/>
+    <text x="685" y="66">three.js</text><text x="685" y="84" font-size="10" font-weight="400">draws the picture</text><text x="685" y="98" font-size="10" font-weight="400">(WebGL)</text>
+
+    <rect x="310" y="170" width="140" height="64" rx="10" fill="#f4f6fb" stroke="#475569" stroke-width="2"/>
+    <text x="380" y="196">world.events</text><text x="380" y="214" font-size="10" font-weight="400">coin, lap, boost, hit…</text>
+
+    <rect x="140" y="250" width="150" height="64" rx="10" fill="#f4f6fb" stroke="#475569" stroke-width="2"/>
+    <text x="215" y="276">Sounds, toasts,</text><text x="215" y="293">vibration</text>
+
+    <rect x="470" y="250" width="150" height="64" rx="10" fill="#e8f1fd" stroke="#2f7de1" stroke-width="2"/>
+    <text x="545" y="276">HUD (Hud.jsx)</text><text x="545" y="294" font-size="10" font-weight="400">reads bus.js 10× a second</text>
+
+    <rect x="620" y="170" width="130" height="64" rx="10" fill="#fde8ec" stroke="#e11d48" stroke-width="2"/>
+    <text x="685" y="196">Race over</text><text x="685" y="214" font-size="10" font-weight="400">store.finishRace()</text>
+  </g>
+  <g stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a3)">
+    <line x1="140" y1="75" x2="157" y2="75"/>
+    <line x1="290" y1="75" x2="307" y2="75"/>
+    <line x1="450" y1="75" x2="467" y2="75"/>
+    <line x1="600" y1="75" x2="617" y2="75"/>
+    <line x1="380" y1="110" x2="380" y2="167"/>
+    <path d="M330 234 L 260 248"/>
+    <path d="M430 234 L 500 248"/>
+    <path d="M450 190 L 617 200"/>
+  </g>
+  <text x="10" y="22" font-size="12" fill="#475569">Every screen frame (Race.jsx → useFrame). When the game is paused, step() is skipped and the clock stands still.</text>
+  <text x="10" y="150" font-size="11" fill="#475569">n = as many 1/60 s steps as real time has passed</text>
+  <text x="10" y="164" font-size="11" fill="#475569">(usually 1 at 60 FPS, 2 at 30 FPS)</text>
+</svg>

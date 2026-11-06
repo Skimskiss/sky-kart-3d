@@ -1,0 +1,31 @@
+{
+  "name": "sky-kart-3d",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sky Kart 3D: Island Grand Prix - an arcade kart racing game for the browser (Vite + React + React Three Fiber + Three.js).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "play": "node scripts/play.mjs",
+    "check": "node scripts/check-tracks.mjs && node scripts/check-save.mjs && node scripts/check-sim.mjs && node scripts/check-gameplay.mjs",
+    "test:browser": "node scripts/browser-test.mjs",
+    "previews": "node scripts/make-previews.mjs",
+    "balance": "node scripts/bot-balance.mjs",
+    "guide": "node scripts/build-guide.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "howler": "^2.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "qrcode-terminal": "^0.12.0",
+    "vite": "^5.4.10"
+  }
+}
